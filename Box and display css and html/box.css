@@ -1,0 +1,17 @@
+div{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: brown;
+    box-shadow: 3px 3px 8px 8px green;
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body{
+    background-color: goldenrod;
+}
