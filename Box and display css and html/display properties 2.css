@@ -1,0 +1,6 @@
+div{
+    display: inline-block;
+    padding: 10px;
+    block-size: 100px;
+    background-color: blueviolet;
+}
