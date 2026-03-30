@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="java.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-box">
+        <div class="title">
+          <h3 style="color: brown">Calculate</h3>
+          <input id="num" type="number" />
+          <button onclick="calculate()">Calculate</button>
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function calculate() {
+        let N = Number(document.getElementById("num").value);
+        let output = "";
+
+        //Print 1 to N;
+
+        for (let i = 1; i <= N; i++) {
+          output += "count = " + i + "<br>";
+        }
+
+        // count even number from 1 to N;
+
+        for (let i = 1; i <= N; i++) {
+          if (i % 2 === 0) {
+            output += "Even = " + i + "<br>";
+          }
+        }
+
+        // count odd number from 1 to N;
+
+        for (let i = 1; i <= N; i++) {
+          if (i % 2 !== 0) {
+            output += "Odd = " + i + "<br>";
+          }
+        }
+
+        // sum of number divisible by both 3 and 5;
+        let sum = 0;
+        for (let i = 1; i <= N; i++) {
+          sum = sum + i;
+          if (i % 3 === 0 && i % 5 === 0) {
+            output += "sum = " + i + "<br>";
+          }
+        }
+
+        // display numbers in reverse from N to 1 while highlighting those divisible by 4;
+
+        for (let i = N; i >= 1; i--) {
+          if (i % 4 === 0) {
+            output +=
+              "<span style='color:green'>i =" + i + "</span>divisible by 4<br>";
+          } else {
+            output += "i = " + i + "<br>";
+          }
+        }
+
+        // show prime number between 1 to N;
+
+        for (let i = 2; i <= N; i++) {
+          let isPrime = true;
+          for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+              isPrime = false;
+              break;
+            }
+          }
+          if (isPrime) {
+            output += "prime number = " + i + "<br>";
+          }
+        }
+        document.getElementById("result").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>

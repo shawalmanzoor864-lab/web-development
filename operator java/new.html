@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management</title>
+
+  <!-- Fixed jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h1>Student Management</h1>
+
+  <form id="studentForm">
+    Name: <input id="name" type="text"><br>
+    Age: <input id="age" type="number"><br>
+    Course: <input id="course" type="text"><br>
+    <button type="submit">Add Student</button>
+  </form>
+
+  <ul id="studentList"></ul>
+
+  <script>
+    let students = [];
+    
+    
+
+    // Constructor
+    function Student(name, age, course) {
+      this.name = name;
+      this.age = age;
+      this.course = course;
+    }
+
+    // Form submit
+    $("#studentForm").submit(function(e) {
+      e.preventDefault();
+
+      let name = $("#name").val();
+      let age = $("#age").val();
+      let course = $("#course").val();
+
+      students.push(new Student(name, age, course));
+      displayStudents();
+
+      this.reset();
+    });
+
+    // Display students
+    function displayStudents() {
+      $("#studentList").empty();
+
+      students.forEach((s, i) => {
+        $("#studentList").append(`
+          <li>
+            ${s.name} (${s.age}, ${s.course})
+            <button onclick="deleteStudent(${i})">Delete</button>
+          </li>
+        `);
+      });
+    }
+
+    // Delete student
+    function deleteStudent(index) {
+      students.splice(index, 1);
+      displayStudents();
+    }
+  </script>
+
+</body>
+</html>
