@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             $("#ManagmentForm").on("submit", function(e) {
+e.preventDefault();
+
+           let name= $("#name").val();
+           let age= $("#age").val();
+           let course= $("#course").val();
+console.log("name", name);
+           let studentObj = new Student(name, age, course);
+           student.push(studentObj);
+           displaystudents();
+           
+           this.reset();
+        })
+            
+        })
+        let student=[];
+        function Student(name, age, course){
+            this.name= name;
+            this.age= age;
+            this.course=course;
+
+        }
+       
+         function displaystudents(){
+             $("#studentlist").empty();
+
+             student.forEach((s, i) => {
+        $("#studentlist").append(`
+          <li>
+            ${s.name} (${s.age}, ${s.course})
+            <button onclick="deleteStudent(${i})">Delete</button>
+          </li>
+        `);
+            }
+        )}
+
+         function deleteStudent(index) {
+      student.splice(index, 1);
+      displaystudents();
+    }
+
+    </script>
+
+
+</head>
+<body>
+
+    <form id="ManagmentForm" >
+        <h1>Student Managment System</h1>
+
+        <label for="name">Name</label><br>
+        <input type="text" id="name"><br><br>
+
+        <label for="age">Age</label><br>
+        <input type="number" id="age"><br><br>
+
+        <label for="course">Course</label><br>
+        <input type="text" id="course"><br><br>
+
+        <button type="submit">submit form</button><br>
+         
+    </form>
+    <ul id="studentlist"></ul>
+
+    
+
+       
+    
+</body>
+</html>
