@@ -1,0 +1,66 @@
+p{
+    color: rgb(37, 37, 243);
+background-color: red;
+
+}
+.hes{
+    color: hsl(120, 50, 50);
+    background-color: hsl(241, 78%, 37%)
+
+
+
+    
+}
+.rk{
+    color: green;
+    background-color: rgba(202, 14, 118, 0.1)
+
+
+}
+h3{
+     height: 100px;
+    width: 100px;
+    min-width: auto;
+    max-width: fit-content;
+    border-style: solid;
+
+    border-radius: 5px;
+    background-color: brown;
+    box-shadow: 3px 3px 8px 8px rgb(11, 8, 226);
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+
+
+    
+}
+.menu{
+    list-style: none;
+    margin: o;
+    padding: 0;
+    display: flex;
+     gap: 20px;
+
+    
+
+}
+.zebra{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background-color: pink;
+
+}
+.float-box{
+    float: right;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    background-color: blue;
+
+}
+.clear-float{
+    clear: both;
+}

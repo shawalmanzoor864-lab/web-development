@@ -1,0 +1,10 @@
+div{
+    display: block;
+    padding: 10px;
+    background-color: rebeccapurple;
+    block-size: 100px;
+    margin: 2px;
+    padding-block: 2px;
+
+
+}

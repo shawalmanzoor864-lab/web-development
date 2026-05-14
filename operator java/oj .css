@@ -1,0 +1,31 @@
+.container{
+     overflow: hidden;
+  max-width: 390px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+.container .title-box{
+     display: flex;
+  width: 200%;
+ 
+
+}
+.container .title {
+  color: black;
+  width: 50%;
+  font-size: larger;
+  font-weight: bold;
+  
+ 
+}
+body{
+     background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+
+}
