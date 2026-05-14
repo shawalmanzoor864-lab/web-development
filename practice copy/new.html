@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox Alert</title>
+       
+    <!-- Name = Shawal Manzoor -->
+
+</head>
+<body>
+
+    <!-- Textbox -->
+    <input type="text" id="myText" placeholder="Enter something">
+
+    <!-- Button -->
+    <button onclick="showAlert()">Click Me</button>
+
+    <script>
+        function showAlert() {
+            // Get value from textbox
+            let text = document.getElementById("myText").value;
+
+            // Show alert
+            alert(text);
+        }
+    </script>
+
+</body>
+</html>

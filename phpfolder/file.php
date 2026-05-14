@@ -15,8 +15,8 @@
 	<label for="second">Email</label><br>
 	<input type=email name="email" id=second><br><br>
 
-    <label for="sixth">TGFRage</label><br>
-    <input type="text" id="sixtRRW3h" name="age"><br><br>
+    <label for="sixth">age</label><br>
+    <input type="text" id="sixth" name="age"><br><br>
 
 
 	<br>
@@ -29,7 +29,7 @@
 	<tr>
 		<th>Name</th>
 		<th>Age</th>
-		<th>Email</th>
+		<th>Email</th>t
 	</tr>
 	<?php
 	$con = mysqli_connect("localhost","root","","phplanguage");
